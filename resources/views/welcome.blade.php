@@ -16,7 +16,7 @@
         </style>
     </head>
     <body class="antialiased">
-       <h1>Welcome to my new journey of learing laravel </h1>
+       <h1>Welcome to my new journey of learing laravel {{$name}} </h1>
    
     </body>
 </html>

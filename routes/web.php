@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 // Basic / Static Route (returns a view)
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['name'=>'Aman']);
 });
 
 // Basic Route returning a string
@@ -47,7 +48,9 @@ Route::get('employee/{id}/{name}', function ($id, $name) {
 
 
 
-Route::get( 'contact', function(){
+Route::get( 'contactme', function(){
     return view('admin.contactme', ['name'=> 'Hii Aman']);
 } 
 );
+
+Route::get('contact', [ContactController::class, 'contactme']);
