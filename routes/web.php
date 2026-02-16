@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ResumeController;
 use Illuminate\Support\Facades\Route;
 
 // Basic / Static Route (returns a view)
@@ -56,3 +57,5 @@ Route::get( 'contactme', function(){
 
 Route::get('contact', [ContactController::class, 'contactme']);
 Route::get('product', [ProductController::class, 'show']);
+
+Route::get('resume', [ResumeController::class, 'Show']);
